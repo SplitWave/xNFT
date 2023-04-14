@@ -15,6 +15,12 @@ const styles = StyleSheet.create({
     fontFamily: "Inter_900Black",
     textAlign: "center",
     fontSize: 64,
-    color: "#fff",
+    color: "#000",
+    // backgroundColor: '#fff',
+    flexDirection: 'column',
+    // textAlign: 'center',
+    // padding: 0 20px;
+    // border-radius: 8px;
+    // padding-top: 20px;
   },
 });

@@ -1,8 +1,7 @@
 import { useFonts, Inter_900Black } from "@expo-google-fonts/dev";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { registerRootComponent } from "expo";
 import { ActivityIndicator, View, StyleSheet } from "react-native";
-import { Navbar } from "./components/Navbar";
+import { FirstScreen } from "./screens/FirstScreen";
 
 
 function App() {
@@ -19,15 +18,8 @@ function App() {
   }
 
 return (
-    // <RecoilRoot>
-    //   <NavigationContainer>
-    //     <TabNavigator />
-    //   </NavigationContainer>
-    // </RecoilRoot>
-
     <View style={styles.container}>
-      <Navbar />
-      
+      <FirstScreen />
     </View>
   );
 }
@@ -35,7 +27,7 @@ return (
 const styles = StyleSheet.create({
     container: {
     minWidth: '100%',
-    backgroundColor: '#000',
+    // backgroundColor: '#000',
     // padding: 12,
   }
 })

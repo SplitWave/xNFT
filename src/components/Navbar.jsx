@@ -45,6 +45,8 @@ const styles = StyleSheet.create({
     height: 56,
     fontSize: 70,
     // fontFamily: 'Helvetica',
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(0, 0, 0, 0.05)',
   },
   image: {
     width: 35,
