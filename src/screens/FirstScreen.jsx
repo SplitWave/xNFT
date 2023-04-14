@@ -12,7 +12,7 @@ export function FirstScreen() {
         <View>
           <View style={styles.pendingWave}>
             <View style={styles.pendingSub}>
-              <View>Pending Wave</View>
+              <View>PENDING WAVE</View>
               <View style={styles.timeDuration}>13 : 55</View>
             </View>
             <View style={styles.pendingSub}>
@@ -35,7 +35,91 @@ export function FirstScreen() {
               </View>
             </View>
           </View>
-          <View style={styles.pastWave}>test</View>
+          
+          <View style={styles.pastWave}>
+            <View style={styles.pastWaveHeading}>PAST WAVES</View>
+            <View style={styles.pastWaveDiv}>
+              {/* ------- */}
+
+              <View style={styles.pastWaveSub}>
+                <View style={styles.pastWaveSubUser}>
+                  <Image
+                    style={styles.image}
+                    source={{
+                      uri:
+                        'https://media.tatler.com/photos/627258d0bc4f55bd13591609/master/w_640,c_limit/Creepz_04052022_Instagram%20@coldbloodedcreepz_nft.jpg',
+                    }}
+                  />
+                  <View>
+                    <View style={{ marginBottom: 3 }}>Initiated by</View>
+                    <View style={{ fontWeight: '300' }}>Jane SOL</View>
+                  </View>
+                </View>
+                <View>
+                  <View style={{ fontWeight: '300' }}>Size</View>
+                  <View>4</View>
+                </View>
+                <View>
+                  <View style={{ marginBottom: 3 }}>$200</View>
+                  <View style={{ fontWeight: '300' }}>Amount</View>
+                </View>
+              </View>
+
+              {/* ------- */}
+
+              <View style={styles.pastWaveSub}>
+                <View style={styles.pastWaveSubUser}>
+                  <Image
+                    style={styles.image}
+                    source={{
+                      uri:
+                        'https://media.tatler.com/photos/627258d0bc4f55bd13591609/master/w_640,c_limit/Creepz_04052022_Instagram%20@coldbloodedcreepz_nft.jpg',
+                    }}
+                  />
+                  <View>
+                    <View style={{ marginBottom: 3 }}>Initiated by</View>
+                    <View style={{ fontWeight: '300' }}>Jane SOL</View>
+                  </View>
+                </View>
+                <View>
+                  <View style={{ fontWeight: '300' }}>Size</View>
+                  <View>4</View>
+                </View>
+                <View>
+                  <View style={{ marginBottom: 3 }}>$200</View>
+                  <View style={{ fontWeight: '300' }}>Amount</View>
+                </View>
+              </View>
+
+              {/* ------- */}
+
+              <View style={styles.pastWaveSub}>
+                <View style={styles.pastWaveSubUser}>
+                  <Image
+                    style={styles.image}
+                    source={{
+                      uri:
+                        'https://media.tatler.com/photos/627258d0bc4f55bd13591609/master/w_640,c_limit/Creepz_04052022_Instagram%20@coldbloodedcreepz_nft.jpg',
+                    }}
+                  />
+                  <View>
+                    <View style={{ marginBottom: 3 }}>Initiated by</View>
+                    <View style={{ fontWeight: '300' }}>Jane SOL</View>
+                  </View>
+                </View>
+                <View>
+                  <View style={{ fontWeight: '300' }}>Size</View>
+                  <View>4</View>
+                </View>
+                <View>
+                  <View style={{ marginBottom: 3 }}>$200</View>
+                  <View style={{ fontWeight: '300' }}>Amount</View>
+                </View>
+              </View>
+
+              {/* ------- */}
+            </View>
+          </View>
         </View>
         <View style={styles.initiateButton}>Initiate new payment</View>
       </View>
@@ -47,6 +131,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'space-between',
     minHeight: '90%',
+    fontSize: '12px',
   },
   pendingWave: {
     borderRadius: '6px',
@@ -67,6 +152,8 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.1,
     shadowRadius: 3,
+    color: '#fff',
+    
   },
   initiateButton: {
     fontSize: '16px',
@@ -83,7 +170,6 @@ const styles = StyleSheet.create({
   pendingSub: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    fontSize: '12px',
     color: 'white',
     height: '20px',
   },
@@ -99,5 +185,35 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '112px',
     justifyContent: 'space-between',
-  }
+  },
+  pastWaveHeading: {
+    backgroundColor: '#F9FAFB',
+    color: '#6B7280',
+    alignItems: 'flex-start',
+    height: '40px',
+    paddingTop: '12px',
+    paddingBottom: '12px',
+    paddingLeft: '24px',
+    paddingRight: '24px',
+  },
+  pastWaveDiv: {
+    paddingTop: '16px',
+    paddingBottom: '16px',
+    paddingLeft: '24px',
+    paddingRight: '24px',
+    justifyContent: 'space-between',
+    height: '205px',
+    
+  },
+  pastWaveSub: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    color: 'black',
+    height: '20px',
+  },
+  pastWaveSubUser: {
+    flexDirection: 'row',
+    width: '112px',
+    justifyContent: 'space-between',
+  },
 })

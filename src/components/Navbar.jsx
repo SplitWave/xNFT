@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     // borderRadius: 10,
     padding: 10,
+    paddingRight: 80,
     height: 56,
     fontSize: 70,
     // fontFamily: 'Helvetica',
