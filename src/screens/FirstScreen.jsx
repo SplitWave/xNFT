@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, Image, ViewStyle, Button } from 'react-native'
+import { View, StyleSheet, Image, TouchableOpacity, Text } from 'react-native'
 import style from '../App.module.css'
 import { Screen } from '../components/Screen'
 import { Navbar } from '../components/Navbar'
@@ -26,16 +26,16 @@ export function FirstScreen() {
                 />
                 <View>
                   <View style={{ marginBottom: 3 }}>Jane SOL</View>
-                  <View style={{ fontWeight: '300' }}>Initiator</View>
+                  <View style={{ color: '#6B7280' }}>Initiator</View>
                 </View>
               </View>
               <View>
                 <View style={{ marginBottom: 3 }}>21.84 SOL</View>
-                <View style={{ fontWeight: '300' }}>$420.00</View>
+                <View style={{ color: '#6B7280' }}>$420.00</View>
               </View>
             </View>
           </View>
-          
+
           <View style={styles.pastWave}>
             <View style={styles.pastWaveHeading}>PAST WAVES</View>
             <View style={styles.pastWaveDiv}>
@@ -52,16 +52,16 @@ export function FirstScreen() {
                   />
                   <View>
                     <View style={{ marginBottom: 3 }}>Initiated by</View>
-                    <View style={{ fontWeight: '300' }}>Jane SOL</View>
+                    <View style={{ color: '#6B7280' }}>Jane SOL</View>
                   </View>
                 </View>
                 <View>
-                  <View style={{ fontWeight: '300' }}>Size</View>
+                  <View style={{ color: '#6B7280' }}>Size</View>
                   <View>4</View>
                 </View>
                 <View>
                   <View style={{ marginBottom: 3 }}>$200</View>
-                  <View style={{ fontWeight: '300' }}>Amount</View>
+                  <View style={{ color: '#6B7280' }}>Amount</View>
                 </View>
               </View>
 
@@ -78,16 +78,16 @@ export function FirstScreen() {
                   />
                   <View>
                     <View style={{ marginBottom: 3 }}>Initiated by</View>
-                    <View style={{ fontWeight: '300' }}>Jane SOL</View>
+                    <View style={{ color: '#6B7280' }}>Jane SOL</View>
                   </View>
                 </View>
                 <View>
-                  <View style={{ fontWeight: '300' }}>Size</View>
+                  <View style={{ color: '#6B7280' }}>Size</View>
                   <View>4</View>
                 </View>
                 <View>
                   <View style={{ marginBottom: 3 }}>$200</View>
-                  <View style={{ fontWeight: '300' }}>Amount</View>
+                  <View style={{ color: '#6B7280' }}>Amount</View>
                 </View>
               </View>
 
@@ -104,16 +104,16 @@ export function FirstScreen() {
                   />
                   <View>
                     <View style={{ marginBottom: 3 }}>Initiated by</View>
-                    <View style={{ fontWeight: '300' }}>Jane SOL</View>
+                    <View style={{ color: '#6B7280' }}>Jane SOL</View>
                   </View>
                 </View>
                 <View>
-                  <View style={{ fontWeight: '300' }}>Size</View>
+                  <View style={{ color: '#6B7280' }}>Size</View>
                   <View>4</View>
                 </View>
                 <View>
                   <View style={{ marginBottom: 3 }}>$200</View>
-                  <View style={{ fontWeight: '300' }}>Amount</View>
+                  <View style={{ color: '#6B7280' }}>Amount</View>
                 </View>
               </View>
 
@@ -132,6 +132,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     minHeight: '90%',
     fontSize: '12px',
+    fontFamily: 'Helvetica',
   },
   pendingWave: {
     borderRadius: '6px',
@@ -153,7 +154,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 3,
     color: '#fff',
-    
   },
   initiateButton: {
     fontSize: '16px',
@@ -191,19 +191,14 @@ const styles = StyleSheet.create({
     color: '#6B7280',
     alignItems: 'flex-start',
     height: '40px',
-    paddingTop: '12px',
-    paddingBottom: '12px',
-    paddingLeft: '24px',
-    paddingRight: '24px',
+    paddingVertical: '12px',
+    paddingHorizontal: '24px',
   },
   pastWaveDiv: {
-    paddingTop: '16px',
-    paddingBottom: '16px',
-    paddingLeft: '24px',
-    paddingRight: '24px',
+    paddingVertical: '16px',
+    paddingHorizontal: '24px',
     justifyContent: 'space-between',
     height: '205px',
-    
   },
   pastWaveSub: {
     flexDirection: 'row',

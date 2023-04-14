@@ -2719,7 +2719,7 @@
   dependencies:
     nanoid "^3.1.23"
 
-"@react-navigation/stack@6.2.1":
+"@react-navigation/stack@^6.2.1":
   version "6.2.1"
   resolved "https://registry.npmjs.org/@react-navigation/stack/-/stack-6.2.1.tgz"
   integrity sha512-JI7boxtPAMCBXi4VJHVEq61jLVHFW5f3npvbndS+XfOsv7Gf0f91HOVJ28DS5c2Fn4+CO4AByjUozzlN296X+A==

@@ -21,8 +21,8 @@ export function Navbar() {
               'https://media.tatler.com/photos/627258d0bc4f55bd13591609/master/w_640,c_limit/Creepz_04052022_Instagram%20@coldbloodedcreepz_nft.jpg',
           }}
         />
-        <View style={{ marginLeft: 20 }}>
-          <Text style={{ fontWeight: 'bold' }}>santino1919</Text>
+        <View style={{ marginLeft: 20, alignItems: 'flex-start' }}>
+          <Text style={{ fontWeight: 'bold' }}>anshss</Text>
           <Text>Fzmd...TTe2</Text>
         </View>
       </View>
@@ -46,6 +46,8 @@ const styles = StyleSheet.create({
     height: 56,
     fontSize: 70,
     // fontFamily: 'Helvetica',
+    
+    fontFamily: 'Helvetica',
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(0, 0, 0, 0.05)',
   },
