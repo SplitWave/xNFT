@@ -1,10 +1,12 @@
 import { useFonts, Inter_900Black } from "@expo-google-fonts/dev";
 import { registerRootComponent } from "expo";
 import { ActivityIndicator, View, StyleSheet } from "react-native";
-import { FirstScreen } from "./screens/FirstScreen";
-import { LoginScreen } from "./screens/LoginScreen";
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from "@react-navigation/native";
+import { LoginScreen } from "./screens/LoginScreen";
+import { FirstScreen } from "./screens/FirstScreen";
+import { SecondScreen } from "./screens/SecondScreen";
+import { ThirdScreen } from "./screens/ThirdScreen";
 
 function App() {
   const Stack = createStackNavigator();
@@ -33,8 +35,11 @@ function App() {
             <Stack.Navigator>
                 <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false}} />
                 <Stack.Screen name="FirstScreen" component={FirstScreen} options={{headerShown: false}} />
+                <Stack.Screen name="SecondScreen" component={SecondScreen} options={{headerShown: false}} />
+                <Stack.Screen name="ThirdScreen" component={ThirdScreen} options={{headerShown: false}} />
             </Stack.Navigator>
           </NavigationContainer>
+          {/* <SecondScreen /> */}
         </View>
     );
 }

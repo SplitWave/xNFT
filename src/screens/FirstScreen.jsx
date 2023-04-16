@@ -1,10 +1,16 @@
 import React from 'react'
-import { View, StyleSheet, Image, TouchableOpacity, Text } from 'react-native'
-import style from '../App.module.css'
+import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native'
 import { Screen } from '../components/Screen'
 import { Navbar } from '../components/Navbar'
+import { SecondScreen } from './SecondScreen'
 
-export function FirstScreen() {
+
+export function FirstScreen({ navigation }) {
+
+  const handlePaymentClick = () => {
+    navigation.navigate(SecondScreen)
+  }
+
   return (
     <Screen>
       <Navbar />
@@ -121,7 +127,9 @@ export function FirstScreen() {
             </View>
           </View>
         </View>
-        <View style={styles.initiateButton}>Initiate new payment</View>
+        <TouchableOpacity style={styles.initiateButton} onPress={handlePaymentClick}>
+        <Text style={{ color: '#fff' }}>Initiate new payment</Text>
+        </TouchableOpacity>
       </View>
     </Screen>
   )
@@ -130,7 +138,7 @@ export function FirstScreen() {
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'space-between',
-    minHeight: '90%',
+    minHeight: '95%',
     fontSize: '12px',
     fontFamily: 'Helvetica',
   },

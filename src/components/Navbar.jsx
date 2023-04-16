@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     paddingRight: 80,
     height: 56,
     fontSize: 70,
+    margin: -12,
     // fontFamily: 'Helvetica',
     
     fontFamily: 'Helvetica',

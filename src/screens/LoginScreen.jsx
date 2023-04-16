@@ -12,7 +12,9 @@ import style from '../App.module.css'
 import { Screen } from '../components/Screen'
 import { FirstScreen } from './FirstScreen'
 
+
 export function LoginScreen({ navigation }) {
+
   const [username, onChangeUsername] = React.useState('')
   const [password, onChangePassword] = React.useState('')
   const [isSelected, setSelection] = React.useState(false)
@@ -72,7 +74,7 @@ export function LoginScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
+    justifyContent: ' ',
     padding: 15,
     fontFamily: 'Helvetica',
   },

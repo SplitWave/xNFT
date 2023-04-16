@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 64,
     color: "#000",
-    // backgroundColor: '#fff',
+    backgroundColor: '#fff',
     flexDirection: 'column',
     // textAlign: 'center',
     // padding: 0 20px;
