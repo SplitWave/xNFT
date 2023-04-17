@@ -50,10 +50,10 @@ export function SecondScreen({ navigation }) {
 
         <View style={{ gap: 12 }}>
           <TouchableOpacity style={styles.split} onPress={handleSplitClick}>
-            <Text style={{ color: '#fff' }}>Split the amount</Text>
+            <Text style={{ color: '#fff', fontWeight: 500 }}>Split the amount</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.cancel}>
-            <Text style={{ color: '#700CC2' }}>Cancel</Text>
+            <Text style={{ color: '#700CC2', fontWeight: 500 }}>Cancel</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -73,10 +73,11 @@ const styles = StyleSheet.create({
     fontWeight: 600,
     width: 311,
     alignSelf: 'center',
+    padding: 10,
   },
   inputCost: {
     fontSize: 32,
-    fontWeight: 600,
+    fontWeight: 700,
     textAlign: 'center',
     color: `rgba(0, 0, 0, 0.2)`,
   },

@@ -128,7 +128,7 @@ export function FirstScreen({ navigation }) {
           </View>
         </View>
         <TouchableOpacity style={styles.initiateButton} onPress={handlePaymentClick}>
-        <Text style={{ color: '#fff' }}>Initiate new payment</Text>
+        <Text style={{ color: '#fff', fontWeight: 500 }}>Initiate new payment</Text>
         </TouchableOpacity>
       </View>
     </Screen>

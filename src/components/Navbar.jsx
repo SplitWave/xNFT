@@ -8,7 +8,6 @@ import {
   Text,
 } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
-import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 export function Navbar() {
   return (

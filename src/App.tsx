@@ -7,6 +7,7 @@ import { LoginScreen } from "./screens/LoginScreen";
 import { FirstScreen } from "./screens/FirstScreen";
 import { SecondScreen } from "./screens/SecondScreen";
 import { ThirdScreen } from "./screens/ThirdScreen";
+import { FourthScreen } from "./screens/FourthScreen";
 
 function App() {
   const Stack = createStackNavigator();
@@ -37,9 +38,10 @@ function App() {
                 <Stack.Screen name="FirstScreen" component={FirstScreen} options={{headerShown: false}} />
                 <Stack.Screen name="SecondScreen" component={SecondScreen} options={{headerShown: false}} />
                 <Stack.Screen name="ThirdScreen" component={ThirdScreen} options={{headerShown: false}} />
+                <Stack.Screen name="FourthScreen" component={FourthScreen} options={{headerShown: false}} />
             </Stack.Navigator>
           </NavigationContainer>
-          {/* <SecondScreen /> */}
+          {/* <LoginScreen /> */}
         </View>
     );
 }

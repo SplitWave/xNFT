@@ -62,11 +62,13 @@ export function LoginScreen({ navigation }) {
           <View style={{ color: '#700CC2' }}>Forgot your password?</View>
         </View>
         <TouchableOpacity style={styles.logIn} onPress={handleLogin}>
-          <Text style={{ color: '#fff' }}>Log in</Text>
+          <Text style={{ color: '#fff', fontWeight: '500' }}>Log in</Text>
         </TouchableOpacity>
         <View style={styles.or}>OR</View>
-        <View style={styles.gum}>Register with Gum</View>
-        <View style={styles.phantom}>Register with Phantom</View>
+        <View style={styles.gum}>
+          <Text style={{color: '#fff', fontWeight: '500'}}>Register with Gum</Text>
+          </View>
+        <View style={styles.phantom}><Text style={{color: '#fff', fontWeight: '500'}}>Register with Phantom</Text></View>
       </View>
     </Screen>
   )
@@ -110,7 +112,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    height: '38px',
+    height: '40px',
     color: '#fff',
     backgroundColor: '#700CC2',
     borderRadius: 6,
@@ -125,18 +127,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    height: '38px',
+    height: '40px',
     color: '#fff',
     backgroundColor: '#D664FF',
     borderRadius: 6,
     marginTop: 20,
+    
   },
   phantom: {
     fontSize: '14px',
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    height: '38px',
+    height: '40px',
     color: '#fff',
     backgroundColor: '#5339CC',
     borderRadius: 6,
