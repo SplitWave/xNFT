@@ -31,13 +31,13 @@ export function FirstScreen({ navigation }) {
                   }}
                 />
                 <View>
-                  <View style={{ marginBottom: 3 }}>Jane SOL</View>
-                  <View style={{ color: '#6B7280' }}>Initiator</View>
+                  <View style={{ marginBottom: 5 }}>Jane SOL</View>
+                  <View style={{ color: '#877497' }}>Initiator</View>
                 </View>
               </View>
               <View>
-                <View style={{ marginBottom: 3 }}>21.84 SOL</View>
-                <View style={{ color: '#6B7280' }}>$420.00</View>
+                <View style={{ marginBottom: 5 }}>21.84 SOL</View>
+                <View style={{ color: '#877497' }}>$420.00</View>
               </View>
             </View>
           </View>
@@ -56,16 +56,16 @@ export function FirstScreen({ navigation }) {
                         'https://media.tatler.com/photos/627258d0bc4f55bd13591609/master/w_640,c_limit/Creepz_04052022_Instagram%20@coldbloodedcreepz_nft.jpg',
                     }}
                   />
-                  <View>
-                    <View style={{ marginBottom: 3 }}>Initiated by</View>
-                    <View style={{ color: '#6B7280' }}>Jane SOL</View>
+                  <View style={{ gap: 2 }}>
+                    <View style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</View>
+                    <View>Jane SOL</View>
                   </View>
                 </View>
-                <View>
+                <View style={{ gap: 2 }}>
                   <View style={{ color: '#6B7280' }}>Size</View>
                   <View>4</View>
                 </View>
-                <View>
+                <View style={{ gap: 2 }}>
                   <View style={{ marginBottom: 3 }}>$200</View>
                   <View style={{ color: '#6B7280' }}>Amount</View>
                 </View>
@@ -82,17 +82,17 @@ export function FirstScreen({ navigation }) {
                         'https://media.tatler.com/photos/627258d0bc4f55bd13591609/master/w_640,c_limit/Creepz_04052022_Instagram%20@coldbloodedcreepz_nft.jpg',
                     }}
                   />
-                  <View>
-                    <View style={{ marginBottom: 3 }}>Initiated by</View>
-                    <View style={{ color: '#6B7280' }}>Jane SOL</View>
+                  <View style={{ gap: 2 }}>
+                    <View style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</View>
+                    <View>NFTgod</View>
                   </View>
                 </View>
-                <View>
+                <View style={{ gap: 2 }}>
                   <View style={{ color: '#6B7280' }}>Size</View>
-                  <View>4</View>
+                  <View>8</View>
                 </View>
-                <View>
-                  <View style={{ marginBottom: 3 }}>$200</View>
+                <View style={{ gap: 2 }}>
+                  <View style={{ marginBottom: 3 }}>$78</View>
                   <View style={{ color: '#6B7280' }}>Amount</View>
                 </View>
               </View>
@@ -108,17 +108,17 @@ export function FirstScreen({ navigation }) {
                         'https://media.tatler.com/photos/627258d0bc4f55bd13591609/master/w_640,c_limit/Creepz_04052022_Instagram%20@coldbloodedcreepz_nft.jpg',
                     }}
                   />
-                  <View>
-                    <View style={{ marginBottom: 3 }}>Initiated by</View>
-                    <View style={{ color: '#6B7280' }}>Jane SOL</View>
+                  <View style={{ gap: 2 }}>
+                    <View style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</View>
+                    <View>Alysson282</View>
                   </View>
                 </View>
-                <View>
+                <View style={{ gap: 2 }}>
                   <View style={{ color: '#6B7280' }}>Size</View>
-                  <View>4</View>
+                  <View>3</View>
                 </View>
-                <View>
-                  <View style={{ marginBottom: 3 }}>$200</View>
+                <View style={{ gap: 2 }}>
+                  <View style={{ marginBottom: 3 }}>$109.23</View>
                   <View style={{ color: '#6B7280' }}>Amount</View>
                 </View>
               </View>
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'space-between',
     minHeight: '95%',
-    fontSize: '12px',
+    fontSize: 12,
     fontFamily: 'Helvetica',
   },
   pendingWave: {
@@ -162,6 +162,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 3,
     color: '#fff',
+    fontWeight: 600
   },
   initiateButton: {
     fontSize: '16px',
@@ -180,6 +181,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     color: 'white',
     height: '20px',
+    marginBottom: '2%',
   },
   timeDuration: {
     color: '#FF829B',

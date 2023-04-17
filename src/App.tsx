@@ -33,7 +33,7 @@ function App() {
 
     return (
         <View style={styles.container}>
-          {/* <NavigationContainer>
+          <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false}} />
                 <Stack.Screen name="FirstScreen" component={FirstScreen} options={{headerShown: false}} />
@@ -42,8 +42,8 @@ function App() {
                 <Stack.Screen name="FourthScreen" component={FourthScreen} options={{headerShown: false}} />
                 <Stack.Screen name="FifthScreen" component={FifthScreen} options={{headerShown: false}} />
             </Stack.Navigator>
-          </NavigationContainer> */}
-          <FifthScreen       />
+          </NavigationContainer>
+          {/* <FirstScreen /> */}
         </View>
     );
 }
