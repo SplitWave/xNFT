@@ -8,6 +8,7 @@ import { FirstScreen } from "./screens/FirstScreen";
 import { SecondScreen } from "./screens/SecondScreen";
 import { ThirdScreen } from "./screens/ThirdScreen";
 import { FourthScreen } from "./screens/FourthScreen";
+import { FifthScreen } from "./screens/FifthScreen"
 
 function App() {
   const Stack = createStackNavigator();
@@ -32,16 +33,17 @@ function App() {
 
     return (
         <View style={styles.container}>
-          <NavigationContainer>
+          {/* <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false}} />
                 <Stack.Screen name="FirstScreen" component={FirstScreen} options={{headerShown: false}} />
                 <Stack.Screen name="SecondScreen" component={SecondScreen} options={{headerShown: false}} />
                 <Stack.Screen name="ThirdScreen" component={ThirdScreen} options={{headerShown: false}} />
                 <Stack.Screen name="FourthScreen" component={FourthScreen} options={{headerShown: false}} />
+                <Stack.Screen name="FifthScreen" component={FifthScreen} options={{headerShown: false}} />
             </Stack.Navigator>
-          </NavigationContainer>
-          {/* <LoginScreen /> */}
+          </NavigationContainer> */}
+          <FifthScreen       />
         </View>
     );
 }
