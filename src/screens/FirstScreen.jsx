@@ -3,7 +3,7 @@ import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native'
 import { Screen } from '../components/Screen'
 import { Navbar } from '../components/Navbar'
 import { SecondScreen } from './SecondScreen'
-
+import Avatar from "boring-avatars";
 
 export function FirstScreen({ navigation }) {
 
@@ -23,13 +23,13 @@ export function FirstScreen({ navigation }) {
             </View>
             <View style={styles.pendingSub}>
               <View style={styles.pendingSubUser}>
-                <Image
-                  style={styles.image}
-                  source={{
-                    uri:
-                      'https://media.tatler.com/photos/627258d0bc4f55bd13591609/master/w_640,c_limit/Creepz_04052022_Instagram%20@coldbloodedcreepz_nft.jpg',
-                  }}
-                />
+                <Avatar
+  size={40}
+  name="Maria Mitchell"
+  variant="marble"
+  square={false}
+  colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
+/>
                 <View>
                   <View style={{ marginBottom: 5 }}>Jane SOL</View>
                   <View style={{ color: '#877497' }}>Initiator</View>
@@ -49,13 +49,12 @@ export function FirstScreen({ navigation }) {
 
               <View style={styles.pastWaveSub}>
                 <View style={styles.pastWaveSubUser}>
-                  <Image
-                    style={styles.image}
-                    source={{
-                      uri:
-                        'https://media.tatler.com/photos/627258d0bc4f55bd13591609/master/w_640,c_limit/Creepz_04052022_Instagram%20@coldbloodedcreepz_nft.jpg',
-                    }}
-                  />
+                <Avatar
+  size={40}
+  name="Amelia Earhart"
+  variant="marble"
+  colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
+/>
                   <View style={{ gap: 2 }}>
                     <View style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</View>
                     <View>Jane SOL</View>
@@ -75,13 +74,12 @@ export function FirstScreen({ navigation }) {
 
               <View style={styles.pastWaveSub}>
                 <View style={styles.pastWaveSubUser}>
-                  <Image
-                    style={styles.image}
-                    source={{
-                      uri:
-                        'https://media.tatler.com/photos/627258d0bc4f55bd13591609/master/w_640,c_limit/Creepz_04052022_Instagram%20@coldbloodedcreepz_nft.jpg',
-                    }}
-                  />
+                <Avatar
+  size={40}
+  name="Belva Lockwood"
+  variant="marble"
+  colors={['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6',]}
+/>
                   <View style={{ gap: 2 }}>
                     <View style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</View>
                     <View>NFTgod</View>
@@ -101,13 +99,12 @@ export function FirstScreen({ navigation }) {
 
               <View style={styles.pastWaveSub}>
                 <View style={styles.pastWaveSubUser}>
-                  <Image
-                    style={styles.image}
-                    source={{
-                      uri:
-                        'https://media.tatler.com/photos/627258d0bc4f55bd13591609/master/w_640,c_limit/Creepz_04052022_Instagram%20@coldbloodedcreepz_nft.jpg',
-                    }}
-                  />
+                <Avatar
+  size={40}
+  name="Florence Chadwick"
+  variant="marble"
+  colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
+/>
                   <View style={{ gap: 2 }}>
                     <View style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</View>
                     <View>Alysson282</View>
@@ -128,7 +125,7 @@ export function FirstScreen({ navigation }) {
           </View>
         </View>
         <TouchableOpacity style={styles.initiateButton} onPress={handlePaymentClick}>
-        <Text style={{ color: '#fff', fontWeight: 500 }}>Initiate new payment</Text>
+        <Text style={{ color: '#fff', fontWeight: 500 }}>Add New Bill</Text>
         </TouchableOpacity>
       </View>
     </Screen>
@@ -140,7 +137,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     minHeight: '95%',
     fontSize: 12,
-    fontFamily: 'Helvetica',
+    fontFamily: 'Inter',
   },
   pendingWave: {
     borderRadius: '6px',
@@ -169,6 +166,7 @@ const styles = StyleSheet.create({
     // marginTop: '100px',
     flexDirection: 'row',
     justifyContent: 'center',
+    fontWeight: 500,
     alignItems: 'center',
     height: '50px',
     color: '#fff',
@@ -185,6 +183,7 @@ const styles = StyleSheet.create({
   },
   timeDuration: {
     color: '#FF829B',
+    fontSize: '14px',
   },
   image: {
     width: 35,

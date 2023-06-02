@@ -6,10 +6,18 @@ import {
   ViewStyle,
   Button,
   Text,
+  TouchableOpacity,
 } from 'react-native'
-import { MaterialCommunityIcons } from '@expo/vector-icons'
+
+import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import WavesOutlinedIcon from '@mui/icons-material/WavesOutlined';
+import { LoginScreen } from '../screens/LoginScreen';
 
 export function Navbar() {
+  const logout = () => {
+    navigation.navigate(LoginScreen)
+  }
   return (
     <View style={styles.container}>
       <View style={styles.userDiv}>
@@ -21,14 +29,18 @@ export function Navbar() {
           }}
         />
         <View style={{ marginLeft: 20, alignItems: 'flex-start' }}>
-          <Text style={{ fontWeight: 'bold' }}>anshss</Text>
+          <Text style={{ fontWeight: 'bold' }}>@MrPeer_here</Text>
           <Text>Fzmd...TTe2</Text>
         </View>
       </View>
       <View style={styles.iconDiv}>
-        <MaterialCommunityIcons name="bell" color="#000" size={22} />
-        <MaterialCommunityIcons name="circle" color="#000" size={22} />
-        <MaterialCommunityIcons name="logout" color="#000" size={22} />
+        <NotificationsNoneOutlinedIcon style={{color: '#000'}} />
+        <WavesOutlinedIcon style={{color: '#000'}} />
+
+        <TouchableOpacity style={styles.initiateButton} onPress={logout}>
+        <LogoutOutlinedIcon style={{color: '#000'}} />
+        </TouchableOpacity>
+
       </View>
     </View>
   )
@@ -41,19 +53,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     // borderRadius: 10,
     padding: 10,
-    paddingRight: 80,
+    paddingRight: 20,
     height: 56,
     fontSize: 70,
     margin: -12,
-    // fontFamily: 'Helvetica',
-    
-    fontFamily: 'Helvetica',
+    fontFamily: 'Inter',
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(0, 0, 0, 0.05)',
   },
   image: {
-    width: 35,
-    height: 35,
+    width: 40,
+    height: 40,
   },
   userDiv: {
     flexDirection: 'row',

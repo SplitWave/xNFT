@@ -10,12 +10,16 @@ import { Navbar } from '../components/Navbar'
 import { Screen } from '../components/Screen'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { FourthScreen } from './FourthScreen'
+import { SecondScreen } from './SecondScreen'
 
 export function ThirdScreen({ navigation }) {
   const [addr, onChangeAddress] = React.useState('')
 
   const handleSummaryClick = () => {
     navigation.navigate(FourthScreen)
+  }
+  const handleGoBack = () => {
+    navigation.navigate(SecondScreen)
   }
 
   return (
@@ -89,7 +93,7 @@ export function ThirdScreen({ navigation }) {
             <TouchableOpacity style={styles.summary}  onPress={handleSummaryClick}>
               <Text style={{ color: '#fff', fontWeight: '500', }}>Check summary</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.back}>
+            <TouchableOpacity style={styles.back} onPress={handleGoBack}>
               <Text style={{ color: '#700CC2', fontWeight: '500' }}>Go back</Text>
             </TouchableOpacity>
           </View>

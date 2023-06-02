@@ -50,8 +50,7 @@ function App() {
 
 const styles = StyleSheet.create({
     container: {
-        minWidth: "100%",
-    },
+        minWidth: "100%",    },
 });
 
 export default registerRootComponent(App);

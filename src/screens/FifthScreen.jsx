@@ -4,26 +4,32 @@ import { Navbar } from '../components/Navbar'
 import { Screen } from '../components/Screen'
 import { LoginScreen } from './LoginScreen'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { FirstScreen } from './FirstScreen'
 
 export function FifthScreen({ navigation }) {
   const handleCancelClick = () => {
     navigation.navigate(LoginScreen)
   }
-
+const HandleClosePopup = () => {
+    navigation.navigate(FirstScreen)
+  }
   return (
     <Screen>
       <Navbar />
       <View style={styles.container}>
+
         <View style={{ marginTop: '4%' }}>
+        <TouchableOpacity style={{ alignSelf: 'flex-end' }} onPress={HandleClosePopup}>
           <MaterialCommunityIcons
             name="close"
             style={{ alignSelf: 'flex-end' }}
             color="#000"
             size={22}
           />
+          </TouchableOpacity>
           <Text style={{ marginTop: '4%', fontWeight: 500 }}>COUNTDOWN</Text>
           <Text style={{ fontSize: 72, fontWeight: 700, color: '#7817C8' }}>
-            5:54
+            -5:54
           </Text>
         </View>
 
@@ -132,7 +138,7 @@ const styles = StyleSheet.create({
   container: {
     minHeight: '95%',
     fontSize: '12px',
-    fontFamily: 'Helvetica',
+    fontFamily: 'Inter',
     justifyContent: 'space-between',
   },
   image: {

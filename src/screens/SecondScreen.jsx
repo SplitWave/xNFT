@@ -9,6 +9,7 @@ import {
 import { Navbar } from '../components/Navbar'
 import { Screen } from '../components/Screen'
 import { ThirdScreen } from './ThirdScreen'
+import { FirstScreen } from './FirstScreen'
 
 export function SecondScreen({ navigation }) {
   
@@ -19,6 +20,9 @@ export function SecondScreen({ navigation }) {
     navigation.navigate(ThirdScreen)
   }
 
+  const handleGoBack = () => {
+    navigation.navigate(FirstScreen)
+  }
   return (
     <Screen>
       <Navbar />
@@ -52,7 +56,7 @@ export function SecondScreen({ navigation }) {
           <TouchableOpacity style={styles.split} onPress={handleSplitClick}>
             <Text style={{ color: '#fff', fontWeight: 500 }}>Split the amount</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.cancel}>
+          <TouchableOpacity style={styles.cancel} onPress={handleGoBack}>
             <Text style={{ color: '#700CC2', fontWeight: 500 }}>Cancel</Text>
           </TouchableOpacity>
         </View>
@@ -65,7 +69,7 @@ const styles = StyleSheet.create({
   container: {
     minHeight: '95%',
     fontSize: '12px',
-    fontFamily: 'Helvetica',
+    fontFamily: 'Inter',
     justifyContent: 'space-between',
   },
   heading: {
@@ -76,7 +80,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   inputCost: {
-    fontSize: 32,
+    fontSize: 48,
     fontWeight: 700,
     textAlign: 'center',
     color: `rgba(0, 0, 0, 0.2)`,

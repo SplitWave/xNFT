@@ -15,16 +15,15 @@ import { FirstScreen } from './FirstScreen'
 
 export function LoginScreen({ navigation }) {
 
-  const [username, onChangeUsername] = React.useState('')
-  const [password, onChangePassword] = React.useState('')
-  const [isSelected, setSelection] = React.useState(false)
-
   const handleLogin = () => {
     navigation.navigate(FirstScreen)
   }
 
   return (
     <Screen>
+      <View style={style.heading}>
+        Welcome to
+      </View>
       <View style={styles.container}>
         <View>
           <Image
@@ -35,50 +34,21 @@ export function LoginScreen({ navigation }) {
             }}
           />
         </View>
-        <View style={styles.heading}>SplitWave</View>
-        <View style={styles.inputs}>
-          <TextInput
-            style={styles.inputSub}
-            onChangeText={onChangeUsername}
-            value={username}
-            placeholder="Username"
-          />
-          <TextInput
-            style={styles.inputSub}
-            onChangeText={onChangePassword}
-            value={password}
-            placeholder="Password"
-          />
-        </View>
-        <View style={styles.passRememberDiv}>
-          <View style={{ flexDirection: 'row' }}>
-            <CheckBox
-              value={isSelected}
-              onValueChange={setSelection}
-              style={styles.checkbox}
-            />
-            <View style={{ marginLeft: 4 }}>Remember me</View>
-          </View>
-          <View style={{ color: '#700CC2' }}>Forgot your password?</View>
-        </View>
-        <TouchableOpacity style={styles.logIn} onPress={handleLogin}>
-          <Text style={{ color: '#fff', fontWeight: '500' }}>Log in</Text>
+        <View style={style.heading}>SplitWave</View>
+                
+        <TouchableOpacity style={styles.wallet} onPress={handleLogin}>
+        <Text style={{color: '#fff', fontWeight: '500'}}>Get Started</Text>
         </TouchableOpacity>
-        <View style={styles.or}>OR</View>
-        <View style={styles.gum}>
-          <Text style={{color: '#fff', fontWeight: '500'}}>Register with Gum</Text>
-          </View>
-        <View style={styles.phantom}><Text style={{color: '#fff', fontWeight: '500'}}>Register with Phantom</Text></View>
-      </View>
+     </View>
     </Screen>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: ' ',
+    justifyContent: 'center',
     padding: 15,
-    fontFamily: 'Helvetica',
+    fontFamily: 'Inter',
   },
   image: {
     width: 120,
@@ -91,50 +61,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontWeight: 600,
   },
-  inputs: {
-    marginTop: 30,
-  },
-  inputSub: {
-    borderRadius: 6,
-    height: 42,
-    margin: 8,
-    borderWidth: 1,
-    padding: 10,
-  },
-  passRememberDiv: {
-    fontSize: 14,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 15,
-  },
-  logIn: {
-    fontSize: '14px',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '40px',
-    color: '#fff',
-    backgroundColor: '#700CC2',
-    borderRadius: 6,
-    marginTop: 15,
-  },
-  or: {
-    fontSize: '14px',
-    marginTop: 20,
-  },
-  gum: {
-    fontSize: '14px',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '40px',
-    color: '#fff',
-    backgroundColor: '#D664FF',
-    borderRadius: 6,
-    marginTop: 20,
-    
-  },
-  phantom: {
+
+  wallet: {
     fontSize: '14px',
     flexDirection: 'row',
     justifyContent: 'center',
