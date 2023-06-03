@@ -54,7 +54,7 @@ export function SecondScreen({ navigation }) {
 
         <View style={{ gap: 12 }}>
           <TouchableOpacity style={styles.split} onPress={handleSplitClick}>
-            <Text style={{ color: '#fff', fontWeight: 500 }}>Split the amount</Text>
+            <Text style={{ color: '#fff', fontWeight: 500 }}>Split options</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.cancel} onPress={handleGoBack}>
             <Text style={{ color: '#700CC2', fontWeight: 500 }}>Cancel</Text>

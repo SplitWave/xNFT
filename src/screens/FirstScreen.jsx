@@ -18,13 +18,13 @@ export function FirstScreen({ navigation }) {
         <View>
           <View style={styles.pendingWave}>
             <View style={styles.pendingSub}>
-              <View>PENDING WAVE</View>
+              <Text style={styles.Text}>PENDING WAVE</Text>
               <View style={styles.timeDuration}>13 : 55</View>
             </View>
             <View style={styles.pendingSub}>
               <View style={styles.pendingSubUser}>
                 <Avatar
-  size={40}
+  size={60}
   name="Maria Mitchell"
   variant="marble"
   square={false}
@@ -57,7 +57,7 @@ export function FirstScreen({ navigation }) {
 />
                   <View style={{ gap: 2 }}>
                     <View style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</View>
-                    <View>Jane SOL</View>
+                    <View>You</View>
                   </View>
                 </View>
                 <View style={{ gap: 2 }}>
@@ -138,10 +138,17 @@ const styles = StyleSheet.create({
     minHeight: '95%',
     fontSize: 12,
     fontFamily: 'Inter',
+    
+  },
+  Text: {
+    color: 'white',
+    fontWeight: 600,
+    fontSize: '21px',
+    fontFamily: 'Inter'
   },
   pendingWave: {
     borderRadius: '6px',
-    height: '104px',
+    minheight: '104px',
     backgroundColor: '#371752',
     marginTop: '30px',
     padding: '24px',
@@ -162,7 +169,7 @@ const styles = StyleSheet.create({
     fontWeight: 600
   },
   initiateButton: {
-    fontSize: '16px',
+    fontSize: '32px',
     // marginTop: '100px',
     flexDirection: 'row',
     justifyContent: 'center',
@@ -178,8 +185,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     color: 'white',
-    height: '20px',
+    minHeight: '20px',
     marginBottom: '2%',
+    fontWeight: 600,
+    fontSize: '16px',
   },
   timeDuration: {
     color: '#FF829B',
@@ -194,6 +203,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '112px',
     justifyContent: 'space-between',
+    minheight: '20px',
   },
   pastWaveHeading: {
     backgroundColor: '#F9FAFB',

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   View,
   StyleSheet,
@@ -10,13 +10,13 @@ import {
 } from 'react-native'
 import style from '../App.module.css'
 import { Screen } from '../components/Screen'
-import { FirstScreen } from './FirstScreen'
 
+import { GenrateWallet } from './GenrateWallet'
 
 export function LoginScreen({ navigation }) {
-
+  
   const handleLogin = () => {
-    navigation.navigate(FirstScreen)
+    navigation.navigate(GenrateWallet)
   }
 
   return (
@@ -35,6 +35,7 @@ export function LoginScreen({ navigation }) {
           />
         </View>
         <View style={style.heading}>SplitWave</View>
+        
                 
         <TouchableOpacity style={styles.wallet} onPress={handleLogin}>
         <Text style={{color: '#fff', fontWeight: '500'}}>Get Started</Text>
@@ -49,6 +50,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 15,
     fontFamily: 'Inter',
+    
   },
   image: {
     width: 120,

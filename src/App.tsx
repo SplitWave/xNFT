@@ -9,6 +9,7 @@ import { SecondScreen } from "./screens/SecondScreen";
 import { ThirdScreen } from "./screens/ThirdScreen";
 import { FourthScreen } from "./screens/FourthScreen";
 import { FifthScreen } from "./screens/FifthScreen"
+import { GenrateWallet } from "./screens/GenrateWallet";
 
 function App() {
   const Stack = createStackNavigator();
@@ -36,6 +37,7 @@ function App() {
           <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false}} />
+                <Stack.Screen name="GenrateWallet" component={GenrateWallet} options={{headerShown: false}} />
                 <Stack.Screen name="FirstScreen" component={FirstScreen} options={{headerShown: false}} />
                 <Stack.Screen name="SecondScreen" component={SecondScreen} options={{headerShown: false}} />
                 <Stack.Screen name="ThirdScreen" component={ThirdScreen} options={{headerShown: false}} />
