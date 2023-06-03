@@ -10,6 +10,9 @@ import { ThirdScreen } from "./screens/ThirdScreen";
 import { FourthScreen } from "./screens/FourthScreen";
 import { FifthScreen } from "./screens/FifthScreen"
 import { GenrateWallet } from "./screens/GenrateWallet";
+import {Buffer} from 'buffer';
+import 'react-native-get-random-values'
+
 
 function App() {
   const Stack = createStackNavigator();

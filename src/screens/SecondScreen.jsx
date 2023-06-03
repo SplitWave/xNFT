@@ -34,15 +34,22 @@ export function SecondScreen({ navigation }) {
             marginTop: '5%',
           }}
         >
+          <TextInput
+            style={styles.inputReciverAddress}
+            
+            
+            placeholder="Enter the reciver address"
+          />
           <Text style={styles.heading}>Select an amount for payment</Text>
           <View>
             <TextInput
               style={styles.inputCost}
               onChangeText={onChangeCost}
               value={cost}
+              inputMode="numeric"
               placeholder="0 SOL"
             />
-            <Text style={{color: `rgba(0, 0, 0, 0.2)`}}>($00.00)</Text>
+            <Text style={{color: `rgba(0, 0, 0, 0.2)`}}>($0.00)</Text>
           </View>
           <TextInput
             style={styles.inputTag}
