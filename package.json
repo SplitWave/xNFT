@@ -8,7 +8,7 @@
     "dev": "expo start --web & npx xnft --iframe http://localhost:19006"
   },
   "dependencies": {
-    "@coral-xyz/common-public": "^0.2.0-latest.3375",
+    
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@expo-google-fonts/dev": "*",
@@ -57,8 +57,8 @@
     "babel-plugin-react-native-platform-specific-extensions": "^1.1.1",
     "react-native-css-transformer": "^1.2.4",
     "react-native-paper": "^5.6.0",
-    "typescript": "^4.9.5",
-    "xnft": "latest"
+    "typescript": "^4.9.5"
+    
   },
   "resolutions": {
     "react-error-overlay": "6.0.11"

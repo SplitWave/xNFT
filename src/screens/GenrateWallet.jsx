@@ -14,10 +14,11 @@ import { Button } from '@mui/material'
 import { FirstScreen } from './FirstScreen'
 import { generateMnemonic } from "@scure/bip39"
 import { wordlist } from "@scure/bip39/wordlists/english"
-
+import ConnectButton from '../components/ConnectWallet'
 
 export function GenrateWallet({ navigation }) {
     const [mnemonic, setMnemonic] = useState('')
+    const [show, setShow] = useState(false)
 
     const handleLogin = () => {
       navigation.navigate(FirstScreen)
@@ -35,7 +36,8 @@ export function GenrateWallet({ navigation }) {
         </View>
         <Button onClick={generate}>Generate</Button>
         <Text>{mnemonic}</Text>
-        <TouchableOpacity style={styles.wallet} onPress={handleLogin}>
+        <TouchableOpacity style={styles.wallet} onPress={() => setShow(true)}>
+          {show && <ConnectButton />}
         <Text style={{color: '#fff', fontWeight: '500'}}>go go</Text>
         </TouchableOpacity>
         </Screen>
