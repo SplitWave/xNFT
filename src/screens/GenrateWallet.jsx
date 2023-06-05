@@ -15,6 +15,7 @@ import { FirstScreen } from './FirstScreen'
 import { generateMnemonic } from "@scure/bip39"
 import { wordlist } from "@scure/bip39/wordlists/english"
 
+import  {authorizationResult}  from './ConnectWallet'
 
 export function GenrateWallet({ navigation }) {
     const [mnemonic, setMnemonic] = useState('')
@@ -36,7 +37,12 @@ export function GenrateWallet({ navigation }) {
         <Button onClick={generate}>Generate</Button>
         <Text>{mnemonic}</Text>
         <TouchableOpacity style={styles.wallet} onPress={handleLogin}>
-        <Text style={{color: '#fff', fontWeight: '500'}}>go go</Text>
+        <Button 
+          style={{color: '#fff', fontWeight: '500'}}
+          onClick = {() => authorizationResult}
+        >
+          Connect Wallet
+        </Button>
         </TouchableOpacity>
         </Screen>
     )

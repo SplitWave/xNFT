@@ -4,8 +4,19 @@ import { Screen } from '../components/Screen'
 import { Navbar } from '../components/Navbar'
 import { SecondScreen } from './SecondScreen'
 import Avatar from "boring-avatars";
+import {useSolanaConnection, usePublicKeys } from 'react-xnft'
+import { PublicKey } from '@solana/web3.js'
 
-export function FirstScreen({ navigation }) {
+export function FirstScreen({ navigation}: any) {
+
+  const connection = useSolanaConnection();
+  
+  const pks = usePublicKeys() as unknown as {solana: string};
+  let pksString: string = "No pubkeys available!"
+  const pk = pks ? new PublicKey(pks?.solana) : undefined;
+  if(pk){
+      pksString = pk.toBase58();
+  }
 
   const handlePaymentClick = () => {
     navigation.navigate(SecondScreen)
@@ -18,26 +29,31 @@ export function FirstScreen({ navigation }) {
         <View>
           <View style={styles.pendingWave}>
             <View style={styles.pendingSub}>
-              <Text style={styles.Text}>PENDING WAVE</Text>
-              <View style={styles.timeDuration}>13 : 55</View>
+              <Text style={styles.Text}>PENDING WAVES</Text>
+            </View>
+            <View style={styles.pendingSub}>
+              <Text style={styles.pk}>{pksString}</Text>
+            </View>
+            <View style={styles.pendingSub}>
+              <Text style={styles.timeDuration}>13 : 55</Text>
             </View>
             <View style={styles.pendingSub}>
               <View style={styles.pendingSubUser}>
                 <Avatar
-  size={60}
-  name="Maria Mitchell"
-  variant="marble"
-  square={false}
-  colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
-/>
+                  size={60}
+                  name="Maria Mitchell"
+                  variant="marble"
+                  square={false}
+                  colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
+                />
                 <View>
                   <View style={{ marginBottom: 5 }}>Jane SOL</View>
-                  <View style={{ color: '#877497' }}>Initiator</View>
+                  <Text style={{ color: '#877497' }}>Initiator</Text>
                 </View>
               </View>
               <View>
                 <View style={{ marginBottom: 5 }}>21.84 SOL</View>
-                <View style={{ color: '#877497' }}>$420.00</View>
+                <Text style={{ color: '#877497' }}>$420.00</Text>
               </View>
             </View>
           </View>
@@ -56,17 +72,17 @@ export function FirstScreen({ navigation }) {
   colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
 />
                   <View style={{ gap: 2 }}>
-                    <View style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</View>
+                    <Text style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</Text>
                     <View>You</View>
                   </View>
                 </View>
                 <View style={{ gap: 2 }}>
-                  <View style={{ color: '#6B7280' }}>Size</View>
+                  <Text style={{ color: '#6B7280' }}>Size</Text>
                   <View>4</View>
                 </View>
                 <View style={{ gap: 2 }}>
                   <View style={{ marginBottom: 3 }}>$200</View>
-                  <View style={{ color: '#6B7280' }}>Amount</View>
+                  <Text style={{ color: '#6B7280' }}>Amount</Text>
                 </View>
               </View>
 
@@ -81,17 +97,17 @@ export function FirstScreen({ navigation }) {
   colors={['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6',]}
 />
                   <View style={{ gap: 2 }}>
-                    <View style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</View>
+                    <Text style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</Text>
                     <View>NFTgod</View>
                   </View>
                 </View>
                 <View style={{ gap: 2 }}>
-                  <View style={{ color: '#6B7280' }}>Size</View>
+                  <Text style={{ color: '#6B7280' }}>Size</Text>
                   <View>8</View>
                 </View>
                 <View style={{ gap: 2 }}>
                   <View style={{ marginBottom: 3 }}>$78</View>
-                  <View style={{ color: '#6B7280' }}>Amount</View>
+                  <Text style={{ color: '#6B7280' }}>Amount</Text>
                 </View>
               </View>
 
@@ -106,17 +122,17 @@ export function FirstScreen({ navigation }) {
   colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
 />
                   <View style={{ gap: 2 }}>
-                    <View style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</View>
+                    <Text style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</Text>
                     <View>Alysson282</View>
                   </View>
                 </View>
                 <View style={{ gap: 2 }}>
-                  <View style={{ color: '#6B7280' }}>Size</View>
+                  <Text style={{ color: '#6B7280' }}>Size</Text>
                   <View>3</View>
                 </View>
                 <View style={{ gap: 2 }}>
                   <View style={{ marginBottom: 3 }}>$109.23</View>
-                  <View style={{ color: '#6B7280' }}>Amount</View>
+                  <Text style={{ color: '#6B7280' }}>Amount</Text>
                 </View>
               </View>
 
@@ -125,7 +141,7 @@ export function FirstScreen({ navigation }) {
           </View>
         </View>
         <TouchableOpacity style={styles.initiateButton} onPress={handlePaymentClick}>
-        <Text style={{ color: '#fff', fontWeight: 500 }}>Add New Bill</Text>
+        <Text style={{ color: '#fff', fontWeight: "500" }}>Add New Bill</Text>
         </TouchableOpacity>
       </View>
     </Screen>
@@ -142,19 +158,25 @@ const styles = StyleSheet.create({
   },
   Text: {
     color: 'white',
-    fontWeight: 600,
-    fontSize: '21px',
+    fontWeight: "600",
+    fontSize: 21,
+    fontFamily: 'Inter'
+  },
+  pk: {
+    color: 'white',
+    fontWeight: "100",
+    fontSize: 12,
     fontFamily: 'Inter'
   },
   pendingWave: {
-    borderRadius: '6px',
-    minheight: '104px',
+    borderRadius: 6,
+    // minheight: 104,
     backgroundColor: '#371752',
     marginTop: '30px',
     padding: '24px',
   },
   pastWave: {
-    borderRadius: '6px',
+    borderRadius: 6,
     height: '257px',
     backgroundColor: '#fff',
     marginTop: '30px',
@@ -166,14 +188,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 3,
     color: '#fff',
-    fontWeight: 600
+    fontWeight: "600"
   },
   initiateButton: {
-    fontSize: '32px',
+    fontSize: 32,
     // marginTop: '100px',
     flexDirection: 'row',
     justifyContent: 'center',
-    fontWeight: 500,
+    fontWeight: "500",
     alignItems: 'center',
     height: '50px',
     color: '#fff',
@@ -187,12 +209,12 @@ const styles = StyleSheet.create({
     color: 'white',
     minHeight: '20px',
     marginBottom: '2%',
-    fontWeight: 600,
-    fontSize: '16px',
+    fontWeight: "600",
+    fontSize: 16,
   },
   timeDuration: {
     color: '#FF829B',
-    fontSize: '14px',
+    fontSize: 14,
   },
   image: {
     width: 35,
