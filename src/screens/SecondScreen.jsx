@@ -75,8 +75,8 @@ export function SecondScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     minHeight: '95%',
-    fontSize: '12px',
-    fontFamily: 'Inter',
+    fontSize: '12',
+    // fontFamily: 'Inter-Black',
     justifyContent: 'space-between',
   },
   heading: {

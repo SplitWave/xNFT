@@ -106,8 +106,8 @@ export function ThirdScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     minHeight: '95%',
-    fontSize: '12px',
-    fontFamily: 'Helvetica',
+    fontSize: '12',
+    // fontFamily: 'Inter-Black',
     justifyContent: 'space-between',
   },
   inputAddr: {

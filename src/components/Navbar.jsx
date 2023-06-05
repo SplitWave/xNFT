@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     height: 56,
     fontSize: 70,
     margin: -12,
-    fontFamily: 'Inter',
+    // fontFamily: 'Inter-Black',
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(0, 0, 0, 0.05)',
   },

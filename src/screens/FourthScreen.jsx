@@ -36,7 +36,7 @@ export function FourthScreen({ navigation }) {
           </View>
 
           <View style={styles.pastWave}>
-            <View style={styles.pastWaveHeading}>PAYMENT #201 SPLIT</View>
+            <Text style={styles.pastWaveHeading}>PAYMENT #201 SPLIT</Text>
             <View style={styles.pastWaveDiv}>
               {/* ------- */}
 
@@ -50,13 +50,13 @@ export function FourthScreen({ navigation }) {
                     }}
                   />
                   <View>
-                    <View style={{ marginBottom: 3 }}>You</View>
-                    <View style={{ color: '#6B7280' }}>33.33%</View>
+                    <Text style={{ marginBottom: 3 }}>You</Text>
+                    <Text style={{ color: '#6B7280' }}>33.33%</Text>
                   </View>
                 </View>
                 <View>
-                  <View style={{ marginBottom: 3 }}>7.28 SOL</View>
-                  <View style={{ color: '#6B7280' }}>($140.00)</View>
+                  <Text style={{ marginBottom: 3 }}>7.28 SOL</Text>
+                  <Text style={{ color: '#6B7280' }}>($140.00)</Text>
                 </View>
               </View>
 
@@ -72,13 +72,13 @@ export function FourthScreen({ navigation }) {
                     }}
                   />
                   <View>
-                    <View style={{ marginBottom: 3 }}>NFTgod</View>
-                    <View style={{ color: '#6B7280' }}>33.33%</View>
+                    <Text style={{ marginBottom: 3 }}>NFTgod</Text>
+                    <Text style={{ color: '#6B7280' }}>33.33%</Text>
                   </View>
                 </View>
                 <View>
-                  <View style={{ marginBottom: 3 }}>7.28 SOL</View>
-                  <View style={{ color: '#6B7280' }}>($140.00)</View>
+                  <Text style={{ marginBottom: 3 }}>7.28 SOL</Text>
+                  <Text style={{ color: '#6B7280' }}>($140.00)</Text>
                 </View>
               </View>
 
@@ -94,13 +94,13 @@ export function FourthScreen({ navigation }) {
                     }}
                   />
                   <View>
-                    <View style={{ marginBottom: 3 }}>Alysson..</View>
-                    <View style={{ color: '#6B7280' }}>33.33%</View>
+                    <Text style={{ marginBottom: 3 }}>Alysson..</Text>
+                    <Text style={{ color: '#6B7280' }}>33.33%</Text>
                   </View>
                 </View>
                 <View>
-                  <View style={{ marginBottom: 3 }}>7.28 SOL</View>
-                  <View style={{ color: '#6B7280' }}>($140.00)</View>
+                  <Text style={{ marginBottom: 3 }}>7.28 SOL</Text>
+                  <Text style={{ color: '#6B7280' }}>($140.00)</Text>
                 </View>
               </View>
 
@@ -127,12 +127,12 @@ export function FourthScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     minHeight: '95%',
-    fontSize: '12px',
-    fontFamily: 'Helvetica',
+    fontSize: '12',
+    // fontFamily: 'Inter-Black',
     justifyContent: 'space-between',
   },
   pay: {
-    fontSize: '16px',
+    fontSize: '16',
     // marginTop: '100px',
     flexDirection: 'row',
     justifyContent: 'center',

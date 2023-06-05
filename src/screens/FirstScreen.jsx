@@ -19,7 +19,7 @@ export function FirstScreen({ navigation }) {
           <View style={styles.pendingWave}>
             <View style={styles.pendingSub}>
               <Text style={styles.Text}>PENDING WAVE</Text>
-              <View style={styles.timeDuration}>13 : 55</View>
+              <Text style={styles.timeDuration}>-13 : 55</Text>
             </View>
             <View style={styles.pendingSub}>
               <View style={styles.pendingSubUser}>
@@ -31,19 +31,19 @@ export function FirstScreen({ navigation }) {
   colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
 />
                 <View>
-                  <View style={{ marginBottom: 5 }}>Jane SOL</View>
-                  <View style={{ color: '#877497' }}>Initiator</View>
+                  <Text style={{ marginBottom: 5 }}>Jane SOL</Text>
+                  <Text style={{ color: '#877497' }}>Initiator</Text>
                 </View>
               </View>
               <View>
-                <View style={{ marginBottom: 5 }}>21.84 SOL</View>
-                <View style={{ color: '#877497' }}>$420.00</View>
+                <Text style={{ marginBottom: 5 }}>21.84 SOL</Text>
+                <Text style={{ color: '#877497' }}>$420.00</Text>
               </View>
             </View>
           </View>
 
           <View style={styles.pastWave}>
-            <View style={styles.pastWaveHeading}>PAST WAVES</View>
+            <Text style={styles.pastWaveHeading}>PAST WAVES</Text>
             <View style={styles.pastWaveDiv}>
               {/* ------- */}
 
@@ -56,17 +56,17 @@ export function FirstScreen({ navigation }) {
   colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
 />
                   <View style={{ gap: 2 }}>
-                    <View style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</View>
-                    <View>You</View>
+                    <Text style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</Text>
+                    <Text>You</Text>
                   </View>
                 </View>
                 <View style={{ gap: 2 }}>
-                  <View style={{ color: '#6B7280' }}>Size</View>
-                  <View>4</View>
+                  <Text style={{ color: '#6B7280' }}>Size</Text>
+                  <Text>4</Text>
                 </View>
                 <View style={{ gap: 2 }}>
-                  <View style={{ marginBottom: 3 }}>$200</View>
-                  <View style={{ color: '#6B7280' }}>Amount</View>
+                  <Text style={{ marginBottom: 3 }}>$200</Text>
+                  <Text style={{ color: '#6B7280' }}>Amount</Text>
                 </View>
               </View>
 
@@ -81,17 +81,17 @@ export function FirstScreen({ navigation }) {
   colors={['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6',]}
 />
                   <View style={{ gap: 2 }}>
-                    <View style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</View>
-                    <View>NFTgod</View>
+                    <Text style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</Text>
+                    <Text>NFTgod</Text>
                   </View>
                 </View>
                 <View style={{ gap: 2 }}>
-                  <View style={{ color: '#6B7280' }}>Size</View>
-                  <View>8</View>
+                  <Text style={{ color: '#6B7280' }}>Size</Text>
+                  <Text>8</Text>
                 </View>
                 <View style={{ gap: 2 }}>
-                  <View style={{ marginBottom: 3 }}>$78</View>
-                  <View style={{ color: '#6B7280' }}>Amount</View>
+                  <Text style={{ marginBottom: 3 }}>$78</Text>
+                  <Text style={{ color: '#6B7280' }}>Amount</Text>
                 </View>
               </View>
 
@@ -106,21 +106,19 @@ export function FirstScreen({ navigation }) {
   colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
 />
                   <View style={{ gap: 2 }}>
-                    <View style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</View>
-                    <View>Alysson282</View>
+                    <Text style={{ marginBottom: 3, color: '#6B7280' }}>Initiated by</Text>
+                    <Text>Alysson282</Text>
                   </View>
                 </View>
                 <View style={{ gap: 2 }}>
-                  <View style={{ color: '#6B7280' }}>Size</View>
-                  <View>3</View>
+                  <Text style={{ color: '#6B7280' }}>Size</Text>
+                  <Text>3</Text>
                 </View>
                 <View style={{ gap: 2 }}>
-                  <View style={{ marginBottom: 3 }}>$109.23</View>
-                  <View style={{ color: '#6B7280' }}>Amount</View>
+                  <Text style={{ marginBottom: 3 }}>$109.23</Text>
+                  <Text style={{ color: '#6B7280' }}>Amount</Text>
                 </View>
               </View>
-
-              {/* ------- */}
             </View>
           </View>
         </View>
@@ -137,14 +135,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     minHeight: '95%',
     fontSize: 12,
-    fontFamily: 'Inter',
+    // fontFamily: 'Sans-serif',
     
   },
   Text: {
     color: 'white',
     fontWeight: 600,
     fontSize: '21px',
-    fontFamily: 'Inter'
+    // fontFamily: 'Sans-serif'
   },
   pendingWave: {
     borderRadius: '6px',

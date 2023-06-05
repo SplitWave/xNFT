@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     container: {
         justifyContent: 'center',
         padding: 15,
-        fontFamily: 'Inter',
+        // fontFamily: 'Inter-Black',
         },
         heading: {
         fontSize: 30,
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
         height: 56,
         fontSize: 70,
         margin: -12,
-        fontFamily: 'Inter',
+        // fontFamily: 'Sans-serif',
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: 20,

@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     padding: 12,
-    fontFamily: "Inter_900Black",
+    // fontFamily: "Inter-Black",
     textAlign: "center",
     fontSize: 64,
     color: "#000",

@@ -34,7 +34,7 @@ const HandleClosePopup = () => {
         </View>
 
         <View style={styles.pastWave}>
-          <View style={styles.pastWaveHeading}>PARTICIPANTS</View>
+          <Text style={styles.pastWaveHeading}>PARTICIPANTS</Text>
           <View style={styles.pastWaveDiv}>
             {/* ------- */}
 
@@ -48,14 +48,14 @@ const HandleClosePopup = () => {
                   }}
                 />
                 <View>
-                  <View style={{ marginBottom: 3 }}>You</View>
+                  <Text style={{ marginBottom: 3 }}>You</Text>
                 </View>
               </View>
               <View>
-                <View style={{ marginBottom: 3 }}>7.28 SOL</View>
-                <View style={{ color: '#6B7280' }}>($140.00)</View>
+                <Text style={{ marginBottom: 3 }}>7.28 SOL</Text>
+                <Text style={{ color: '#6B7280' }}>($140.00)</Text>
               </View>
-              <View style={styles.pending}>Pending</View>
+              <Text style={styles.pending}>Pending</Text>
             </View>
 
             {/* ------- */}
@@ -70,14 +70,14 @@ const HandleClosePopup = () => {
                   }}
                 />
                 <View>
-                  <View style={{ marginBottom: 3 }}>NFTgod</View>
+                  <Text style={{ marginBottom: 3 }}>NFTgod</Text>
                 </View>
               </View>
               <View>
-                <View style={{ marginBottom: 3 }}>7.28 SOL</View>
-                <View style={{ color: '#6B7280' }}>($140.00)</View>
+                <Text style={{ marginBottom: 3 }}>7.28 SOL</Text>
+                <Text style={{ color: '#6B7280' }}>($140.00)</Text>
               </View>
-              <View style={styles.paid}>Paid</View>
+              <Text style={styles.paid}>Paid</Text>
             </View>
 
             {/* ------- */}
@@ -92,14 +92,14 @@ const HandleClosePopup = () => {
                   }}
                 />
                 <View>
-                  <View style={{ marginBottom: 3 }}>Alysson..</View>
+                  <Text style={{ marginBottom: 3 }}>Alysson..</Text>
                 </View>
               </View>
               <View>
-                <View style={{ marginBottom: 3 }}>7.28 SOL</View>
-                <View style={{ color: '#6B7280' }}>($140.00)</View>
+                <Text style={{ marginBottom: 3 }}>7.28 SOL</Text>
+                <Text style={{ color: '#6B7280' }}>($140.00)</Text>
               </View>
-              <View style={styles.paid}>Paid</View>
+              <Text style={styles.paid}>Paid</Text>
             </View>
 
             {/* ------- */}
@@ -137,8 +137,8 @@ const HandleClosePopup = () => {
 const styles = StyleSheet.create({
   container: {
     minHeight: '95%',
-    fontSize: '12px',
-    fontFamily: 'Inter',
+    fontSize: '12',
+    // fontFamily: 'Inter-Black',
     justifyContent: 'space-between',
   },
   image: {

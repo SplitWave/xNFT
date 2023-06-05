@@ -21,9 +21,9 @@ export function LoginScreen({ navigation }) {
 
   return (
     <Screen>
-      <View style={style.heading}>
+      <Text style={style.heading}>
         Welcome to
-      </View>
+      </Text>
       <View style={styles.container}>
         <View>
           <Image
@@ -34,7 +34,7 @@ export function LoginScreen({ navigation }) {
             }}
           />
         </View>
-        <View style={style.heading}>SplitWave</View>
+        <Text style={style.heading}>SplitWave</Text>
         
                 
         <TouchableOpacity style={styles.wallet} onPress={handleLogin}>
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     padding: 15,
-    fontFamily: 'Inter',
+    // fontFamily: 'Inter-Black',
     
   },
   image: {
@@ -59,13 +59,13 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   heading: {
-    fontSize: '30px',
+    fontSize: '30',
     marginTop: 10,
     fontWeight: 600,
   },
 
   wallet: {
-    fontSize: '14px',
+    fontSize: '14',
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',

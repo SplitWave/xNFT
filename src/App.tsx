@@ -1,4 +1,4 @@
-import { useFonts, Inter_900Black } from "@expo-google-fonts/dev";
+
 import { registerRootComponent } from "expo";
 import { ActivityIndicator, View, StyleSheet } from "react-native";
 import { createStackNavigator } from '@react-navigation/stack';
@@ -10,30 +10,16 @@ import { ThirdScreen } from "./screens/ThirdScreen";
 import { FourthScreen } from "./screens/FourthScreen";
 import { FifthScreen } from "./screens/FifthScreen"
 import { GenrateWallet } from "./screens/GenrateWallet";
-import {Buffer} from 'buffer';
-import 'react-native-get-random-values'
 
+import 'react-native-get-random-values'
+// import { useFonts } from 'expo-font';
 
 function App() {
   const Stack = createStackNavigator();
 
-    let [fontsLoaded] = useFonts({
-        Inter_900Black,
-    });
-
-    if (!fontsLoaded) {
-        return (
-            <View
-                style={{
-                    flex: 1,
-                    alignItems: "center",
-                    justifyContent: "center",
-                }}
-            >
-                <ActivityIndicator />
-            </View>
-        );
-    }
+  // const [fontsLoaded] = useFonts({
+  //   'Inter-Black': require('./assets/fonts/Inter-Black.otf'),
+  // });
 
     return (
         <View style={styles.container}>
